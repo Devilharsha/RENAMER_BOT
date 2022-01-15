@@ -12,9 +12,21 @@ async def start(client,message):
 	**Document Or Video** and enter new filenameto rename it__
 	""",reply_to_message_id = message.message_id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("rex Support 🇮🇳" ,url="https://t.me/REX_Bots_Support") ], 
-	[InlineKeyboardButton("rex updates 🧐", url="https://t.me/REX_BOTZ") ]  ]))
+	 [[ InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ 🇮🇳" ,url="https://t.me/REX_Botz") ], 
+	[InlineKeyboardButton("ɢʀᴏᴜᴘ 🧐", url="https://t.me/REX_BOTs_support") ]  ]))
 
+
+	
+@Client.on_message(filters.private & filters.command(["help"]))
+async def start(client,message):
+	insert(int(message.chat.id))
+	await message.reply_text(text =f"""
+	Hello {message.from_user.first_name }
+	Please sent any telegram *Document Or Video*
+        𝚂𝚎𝚕𝚎𝚌𝚝 𝚝𝚑𝚎 𝙾𝚙𝚝𝚒𝚘𝚗 𝚢𝚘𝚞 𝚗𝚎𝚎𝚍 𝚜𝚎𝚗𝚍 𝚗𝚊𝚖𝚎 𝚘𝚏 𝚝𝚑𝚎 𝚏𝚒𝚕𝚎 𝚠𝚒𝚝𝚑 𝚎𝚡𝚝𝚎𝚗𝚜𝚒𝚘𝚗.
+	""",reply_to_message_id = message.message_id ,  
+	reply_markup=InlineKeyboardMarkup(
+	 [[ InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ" ,url="https://t.me/harshahero") ]]))
 
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
